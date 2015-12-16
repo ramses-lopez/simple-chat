@@ -1,4 +1,7 @@
-http://socket.io/get-started/chat/
+
+Live demo: http://chat-677.herokuapp.com
+
+Original http://socket.io/get-started/chat
 
 *TO-DO*
 
