@@ -1,6 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res){
   // console.log(__dirname);
@@ -8,7 +9,7 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
-  // console.log('an user connected');
+  console.log('an user connected');
 
   socket.on('disconnect', function(){
     console.log('user disconnected');
@@ -22,6 +23,6 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(80, function(){
-  console.log('listening on *:80');
+http.listen(port, function(){
+  console.log('listening on *:' + port);
 });
