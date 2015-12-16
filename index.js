@@ -16,12 +16,12 @@ io.on('connection', function(socket){
 
   socket.on('chat message', function(msg){
     console.log('message: ' + msg);
-    // io.emit('chat message', msg);
-    socket.broadcast.emit('hi');
+    io.emit('chat message', msg);
+    //socket.broadcast.emit('hi');
   });
 
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(80, function(){
+  console.log('listening on *:80');
 });
